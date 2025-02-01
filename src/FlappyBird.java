@@ -65,9 +65,9 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
     }
 
     void startGame() {
-        playerName = JOptionPane.showInputDialog(this, "Enter your name:");
+        playerName = JOptionPane.showInputDialog(this, "Masukkan Nama:");
         if (playerName == null || playerName.trim().isEmpty()) {
-            playerName = "Player";
+            playerName = "Pemain";
         }
         gameStarted = true;
         remove(startButton);
@@ -143,9 +143,9 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
     }
 
     void restartGame() {
-        playerName = JOptionPane.showInputDialog(this, "Enter your name:");
+        playerName = JOptionPane.showInputDialog(this, "Masukkkan Nama:");
         if (playerName == null || playerName.trim().isEmpty()) {
-            playerName = "Player";
+            playerName = "Pemain";
         }
         retryButton.setVisible(false);
         bird.y = birdY;
@@ -174,7 +174,7 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
     @Override public void keyReleased(KeyEvent e) {}
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Flappy Bird");
+        JFrame frame = new JFrame("Flappy Bird Java");
         FlappyBird game = new FlappyBird();
         frame.add(game);
         frame.setSize(game.boardWidth, game.boardHeight);
